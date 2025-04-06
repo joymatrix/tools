@@ -1,9 +1,9 @@
 package utils
 
 import (
+	"configs"
 	"context"
 	"fmt"
-	"sanicalc/configs"
 	"time"
 
 	"github.com/redis/go-redis/v9"

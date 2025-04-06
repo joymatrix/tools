@@ -11,38 +11,11 @@ import (
 )
 
 var (
-	appId             = "wxac396a3be7a16844"
-	mchId             = "1615933939"
-	serialNo          = "33DDFEC51BF5412F663B9B56510FD567B625FC68"
-	apiv3Key          = "V10987654321younggee12345678910V"
-	privateKeyContent = `-----BEGIN PRIVATE KEY-----
-MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDiS0mOMU85JaH1
-nRsOU57TfKP+3ma7TiEe2jQNHhF1UUW8i1+Hc1NeLe7dh29J5aEa/isu0RG2LHjY
-P73dzPkarAdhmW3ETsbBVazUw7RfhbPawR6EjBArRAojqHLXdSTFeDM6LtmwbWD2
-JEjiBKyTMtsbnap4ubLhR03huPn8V20Hbq3Zg+U8T4XtnK7jrac2SqkuybKheRX8
-OzaefU/nYbxKwyTqKCanAs96ZTFuEceW9Utoa4jb4bqdVVhbc2P5gyyssKfYkfDj
-Pdr2X3vg11qq7bhjQ+xLgUiWwXlqnKY0eHxvx0Zdh5PWdh0oYZtbuHrkPPJaf4zu
-Zkre9VnXAgMBAAECggEASPlaWP5Ru+4E0n29UdtpZm3VPMVff5tsVtSq4GgH3Ts+
-L9UKE1X/Vmmdk9au7recQmYgatKE0ah5t9KmWbZVxmIfZzvhB+MXeRU1zM7nhb5K
-B4srWjcIp8sjMeiKUCy4lO10J5kgHiLHl9iPoEM9m6JUwg0QAipwIvGpjdbm1paH
-esqCyZ2+fyTypO1mkpPOOB6caGwePE0Ppd/U5woPKPS0H5JnBdKPWBh/XYkBigOl
-fMRjJg9BDGPjxI1Rt+F6S359fgfXZJV1m74YVL9HxgfKi+WHdDTtj0094NBqizCg
-goeLZbz6aWYbOBmpFHrK8F2i/pYU658KLCtjjpvnQQKBgQD6JJGRqqF1OLVsjJ+E
-+8ts8IdC+OBYY9YHgLw5D2aFUrtJre9Fiktj0hupXPm+01kmc+5OupR3O/L8jhM6
-+NTe3fmIzNLk72GeZsiWFrZCN0fKjts421wwyhBrqW/qZN66a1kYA7fvr0ToRjL1
-jLhTqu0a8BGRyaxbqlebo/5FkQKBgQDnl8MYmJoYpJ36WK3Bd1j/9eczDmRXf4RW
-kZjIOeXBN4zHZsvlFtMtcaZAw3Z1KPbM4ncuKwl+pc7oNUfOAU/IOiBEiZR7zSYG
-D8g+UoXfZzv5mFQQBSagfY4Q0bigG1Zt/QPMoN5setiG6BJ+bwN7WfXNjRjyaXtZ
-ovUUniFU5wKBgQDrvu0mcL6MIG7zp7Brf3bf6+w+lRmylBzRo2VBDZ+chTUXooJ/
-cm/M2ubQ/lwtmThLAjWVI0jq+qftl+TNzleo12DmqcsUkfrZc5sVwL/ytfDGGU7I
-TgybusQxA1YDfR9gZ+1msZJ3pSJ3GjnKq93IlK2zlo+oa34yQd8hQzRP0QKBgQDQ
-5TkbNHq6g7HjoJ2KBocGyd2zVeX4bpMGKuouoNq2v86CBh0gFMiDEyItBKIS59JF
-2Hg78qHr1M+e8IBGNzSpnJSCfb6rNM55ZT7vyCvs6QdWCaq5kIvY86dzUFhCQqZh
-K3mD2A8Itn4cobQcyzHOz8RBlmXMMo0Ku0xpPoE+PQKBgEFcy2wvv/saKJ+3t2Cw
-4ckwskhsQ2CizlAlTCNmBzou+IYfcg3VxS7P0EA/ViUXHTOx1pjhS977FLqJxe08
-FU7a3mIzzehJA0VnsZC6lzCqSRxdE4bcEs9Opw+sJS7abJKRU2QeZSJEChqAMUhJ
-3oP15BVjOfW79TL/hp8fRZAt
------END PRIVATE KEY-----`
+	appId             = ""
+	mchId             = ""
+	serialNo          = ""
+	apiv3Key          = ""
+	privateKeyContent = ``
 )
 var wechatClient *wechat.ClientV3
 
@@ -74,7 +47,7 @@ func (wp *WechatPay) TradePay(c *gin.Context, amount int, tradeNo string) (strin
 
 	bm := make(gopay.BodyMap)
 	bm.Set("appid", appId).
-		Set("description", "环卫宝微信支付").
+		Set("description", "xxx").
 		Set("out_trade_no", tradeNo).
 		Set("time_expire", expire).
 		Set("notify_url", "https://www.fmm.ink").

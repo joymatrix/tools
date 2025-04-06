@@ -1,10 +1,8 @@
 package dao
 
 import (
+	"configs"
 	"fmt"
-	"sanicalc/configs"
-	"sanicalc/internal/model"
-	"sanicalc/internal/utils"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

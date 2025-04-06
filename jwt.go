@@ -2,7 +2,6 @@ package utils
 
 import (
 	"errors"
-	"sanicalc/internal/constants"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"

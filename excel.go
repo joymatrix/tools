@@ -3,7 +3,7 @@ package utils
 import (
 	"fmt"
 	"math/rand"
-	"sanicalc/internal/model"
+
 	"strconv"
 	"time"
 

@@ -1,8 +1,8 @@
 package utils
 
 import (
+	"configs"
 	"fmt"
-	"sanicalc/configs"
 	"time"
 
 	rotatelogs "github.com/lestrrat-go/file-rotatelogs"
